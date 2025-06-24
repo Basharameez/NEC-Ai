@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEC Student Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="xlsx.full.min.js"></script> <!-- SheetJS library -->
+</head>
+<body>
+  <header>
+    <img src="img/logo.jpg" alt="Logo" class="logo"/>
+    <h1>NEC Student Info Portal</h1>
+    <button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <!-- Filter Section -->
+  <section class="filters">
+    <select id="year">
+      <option disabled selected>Select Year</option>
+      <option>2022</option>
+      <option>2023</option>
+      <option>2024</option>
+    </select>
+
+    <select id="branch">
+      <option disabled selected>Select Branch</option>
+      <option>ai</option>
+      <option>it</option>
+    </select>
+
+    <select id="section">
+      <option disabled selected>Select Section</option>
+      <option>sectionA</option>
+      <option>sectionB</option>
+      <option>sectionC</option>
+    </select>
+
+    <button onclick="loadStudentData()">Get Details</button>
+  </section>
+
+  <!-- Search Input -->
+  <input type="text" id="search" placeholder="Search by any detail..." oninput="searchStudents()" />
+
+  <!-- Student Display Section -->
+  <section id="student-container" class="student-container">
+    <!-- Student cards will be inserted here dynamically -->
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

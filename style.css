@@ -1,0 +1,154 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+:root {
+  --bg: #f0f0f3;
+  --text: #000;
+  --card-bg: rgba(255, 255, 255, 0.3);
+  --card-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --accent: #3498db;
+}
+
+body.dark-theme {
+  --bg: #121212;
+  --text: #eee;
+  --card-bg: rgba(40, 40, 40, 0.4);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+header {
+  background: var(--accent);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.filters select, .filters button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#search {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 12px;
+  font-size: 16px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.student-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
+
+.student-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 20px;
+  width: 95%;
+  max-width: 900px;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-details {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.student-details h3 {
+  margin: 0;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-row a {
+  text-decoration: none;
+  padding: 6px 10px;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.student-img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: white;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.student-img:hover {
+  transform: scale(1.08);
+}
+
+@media screen and (min-width: 600px) {
+  .student-card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .student-details {
+    width: 65%;
+  }
+
+  .student-img {
+    max-height: 250px;
+  }
+}
