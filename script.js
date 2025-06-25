@@ -46,6 +46,7 @@ function renderStudents(data, imgFolder) {
     card.innerHTML = `
       <div class="student-details">
         <h3>${name}</h3>
+        <h3>${rollNo}</h3>
         <p><strong>Parent:</strong> ${father}</p>
         <div class="contact-row">
           <span><strong>Student:</strong> ${mobile || phone}</span>
